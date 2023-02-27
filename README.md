@@ -24,6 +24,9 @@ Run `kvm-ok`
 
 ` sudo apt-get install libncurses-dev gawk flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf bc pahole attr`
 
+### Install qemu
+`sudo apt install qemu-kvm virt-manager virtinst libvirt-clients bridge-utils libvirt-daemon-system -y`
+
 ### Compile kernel
 Prepare your config or just use https://github.com/cs423-uiuc/qemu-script/blob/main/.config for kernel 5.15
 ```
