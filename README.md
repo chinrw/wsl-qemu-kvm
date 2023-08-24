@@ -4,7 +4,7 @@
 
 `https://learn.microsoft.com/en-us/windows/wsl/install`
 
-### Edit /etc/wsl.conf
+### Edit /etc/wsl.conf on Linux guest
 
 ```
 [boot]
@@ -18,7 +18,7 @@ Remember to restart WSL2 `wsl --shutdown` after editing wsl.conf
 
 #### Check kvm is enabled
 
-Run `kvm-ok`
+Run `kvm-ok` on guest
 
 ### Install deps for kernel compiling
 
