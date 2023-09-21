@@ -4,17 +4,24 @@
 
 `https://learn.microsoft.com/en-us/windows/wsl/install`
 
-### Edit /etc/wsl.conf on Linux guest
+### Install `attr` package on Linux guest
+`sudo apt install attr` For Ubuntu
 
+### Edit /etc/wsl.conf on Linux guest
 ```
 [boot]
 systemd=true
+command = /bin/bash -c 'chown -v root:kvm /dev/kvm && chmod 660 /dev/kvm'
+
 
 [wsl2]
 nestedVirtualization=true
 ```
 
 Remember to restart WSL2 `wsl --shutdown` after editing wsl.conf
+
+### Adding yourself to the kvm group
+`sudo usermod -a -G kvm ${USER}`
 
 #### Check kvm is enabled
 
